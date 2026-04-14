@@ -69,10 +69,6 @@ Durante el desarrollo se implementaron funcionalidades como:
 
 Para ejecutar el proyecto, es necesario contar con un servidor local. En este caso, se utilizó WampServer.
 
-🌐 **Sitio oficial de descarga:**  
-https://www.wampserver.com/en/download-wampserver-64bits/
-
-
 #### 📥 Descarga de WampServer
 
 A continuación, se muestra la página oficial de descarga:
@@ -117,28 +113,57 @@ Para instalar Composer, se debe ejecutar el archivo **Composer-Setup.exe** desca
 Una vez finalizada la instalación, se debe verificar que Composer funcione correctamente.
 
 Para ello, abrir la consola (CMD) y ejecutar el siguiente comando:
+```bash
 composer
-
+```
 Si la instalación fue exitosa, se mostrará la información de Composer en pantalla.
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/f3c8b25d-70a1-4632-a2a1-26eae2e23ba5" width="700"> </p>
 
 ---
 
-### 🔹 Paso 3: Configurar entorno
+### 🔹 Paso 3: Instalación de Laravel
 
-```bash id="pgklcy"
-cp .env.example .env
-php artisan key:generate
+En este paso se realiza la creación del proyecto Laravel dentro del directorio del servidor local (WampServer).
+
+
+
+#### 💻 Ejecución de comandos
+
+Se abre la consola (CMD) y se navega hasta la carpeta `www` donde se almacenan los proyectos:
+
+```bash
+C:\Windows\System32>cd..
+C:\Windows>cd..
+C:\>cd wamp64
+C:\wamp64>cd www
+C:\wamp64\www>laravel new labLaravelLogin7
 ```
+📸 Resultado en consola
+<p align="center"> <img src="https://github.com/user-attachments/assets/f958da34-bfa7-46c9-b8d3-2ac473f16a3c" width="800"> </p>
 
 ---
 
-### 🔹 Paso 4: Configurar base de datos
+### 🔹 Paso 4: Abrir el proyecto en Visual Studio Code y configurar la base de datos
 
-Editar el archivo `.env`:
+En este paso se abre la carpeta del proyecto Laravel en Visual Studio Code para realizar la configuración de la base de datos.
 
-```env id="3xw4q6"
+
+#### 📂 Apertura del proyecto
+
+Se debe abrir la carpeta creada (`labLaravelLogin7`) en Visual Studio Code.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/437faf96-b788-49bc-a69b-9a7fc40b7279" width="800">
+</p>
+
+
+
+#### ⚙️ Configuración del archivo `.env`
+
+Luego, se procede a editar el archivo `.env` para establecer la conexión con la base de datos MySQL:
+
+```env id="j7k2hp"
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
 DB_PORT=3306
@@ -147,16 +172,71 @@ DB_USERNAME=root
 DB_PASSWORD=
 ```
 
+📌 **Nota:**  
+Es importante asegurarse de que la base de datos laravel_login exista en MySQL antes de ejecutar las migraciones.
+
 ---
 
-### 🔹 Paso 5: Ejecutar migraciones
+### 🔹 Paso 5: Ejecución de comandos y configuración del sistema
 
-```bash id="yt0sfe"
-php artisan migrate
+En este paso se ejecutan comandos en la terminal de Visual Studio Code y se realiza una configuración adicional en el proyecto Laravel.
+
+#### 💻 Ejecución de comandos en la terminal
+
+Abrir la terminal en Visual Studio Code y ejecutar los siguientes comandos:
+
+```bash
+php artisan config:clear
+php artisan config:cache
+```
+Estos comandos permiten limpiar y actualizar la configuración del sistema.
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/f88b0084-cd18-424d-af89-18a86d700db1" width="800"> </p>
+
+####⚙️ Configuración del archivo AppServiceProvider
+
+Se debe realizar un ajuste en el archivo:
+
+📁 app/Providers/AppServiceProvider.php
+
+Agregar la siguiente configuración dentro del método boot():
+
+```<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     */
+    public function register(): void
+    {
+        //
+    }
+
+    /**
+     * Bootstrap any application services.
+     */
+    public function boot(): void
+    {
+        Schema::defaultStringLength(191);
+    }
+}
 ```
 
+<img width="1919" height="844" alt="image" src="https://github.com/user-attachments/assets/f46e01df-41f5-4349-866b-c50f22b9abc1" />
+
+
 ---
 
+### 🔹 Paso 6: Ejecutar migraciones
+
+
+
+---
 ## 🔐 Instalación del Sistema de Autenticación
 
 Se utilizó Laravel UI con Bootstrap:
