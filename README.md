@@ -232,10 +232,63 @@ class AppServiceProvider extends ServiceProvider
 
 ---
 
-### 🔹 Paso 6: Ejecutar migraciones
+### 🔹 Paso 6: Ejecución de Migraciones
+
+En este paso se crean las tablas necesarias en la base de datos mediante las migraciones de Laravel.
+
+
+#### 💻 Ejecutar comando
+
+Abrir la terminal en Visual Studio Code y ejecutar el siguiente comando:
+
+```bash
+php artisan migrate
+```
+
+Al ejecutar el comando, el sistema solicitará confirmación.
+Se debe escribir yes para continuar con el proceso.
+
+📸 Resultado de la ejecución
+<p align="center"> <img src="https://github.com/user-attachments/assets/3e3a8c5b-5a13-40f5-a658-3709a575919f" width="800"> </p>
+---
+
+### 🔹 Paso 7: Ejecución del servidor y verificación del sistema
+
+En este paso se levanta el servidor de Laravel y se verifica el funcionamiento del proyecto.  
+Además, se muestra la creación de la base de datos en phpMyAdmin.
 
 
 
+#### 💻 Ejecutar servidor de Laravel
+
+En la terminal de Visual Studio Code ejecutar:
+
+```bash
+php artisan serve
+```
+Este comando iniciará el servidor local y generará una URL como:
+
+http://127.0.0.1:8000
+<p align="center"> <img src="https://github.com/user-attachments/assets/c7d3adcd-312e-45fb-916e-bf0e16b940da" width="700"> </p>
+🌐 Visualización en el navegador
+
+Presionar Ctrl + Click sobre el enlace generado para abrir el proyecto en el navegador.
+
+Si todo está correcto, se mostrará la página principal de Laravel.
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/24f6aff1-6c7f-4123-b92a-e191ecf5286e" width="800"> </p>
+🗄️ Creación de la base de datos en phpMyAdmin
+
+Luego, se debe acceder a phpMyAdmin desde WampServer para crear la base de datos utilizada en el proyecto.
+
+Se crea la base de datos con el nombre:
+
+laravel_login
+<p align="center"> <img src="https://github.com/user-attachments/assets/975cac60-1bb9-4cd7-9e97-3e90666ac861" width="800"> </p>
+
+---
+### 🔹 Paso 8: Bootstrap con login/registro
+ Para entrar al Bootstrap con login/registro
 ---
 ## 🔐 Instalación del Sistema de Autenticación
 
