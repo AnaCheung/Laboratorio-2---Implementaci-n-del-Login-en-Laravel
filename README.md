@@ -1,12 +1,14 @@
 # 🧪 Laboratorio #2 - Implementación del Login en Laravel
 
 
-## 📚 UNIVERSIDAD TECNOLÓGICA DE PANAMÁ
+## UNIVERSIDAD TECNOLÓGICA DE PANAMÁ
 
 **Facultad de Ingeniería de Sistemas Computacionales**
-Campus Víctor Levi Sasso
+
+**Campus Víctor Levi Sasso**
 
 **Curso:** Desarrollo de Software VII
+
 **Instructor:** Ing. Irina Fong
 
 ---
@@ -193,11 +195,11 @@ Estos comandos permiten limpiar y actualizar la configuración del sistema.
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/f88b0084-cd18-424d-af89-18a86d700db1" width="800"> </p>
 
-####⚙️ Configuración del archivo AppServiceProvider
+#### ⚙️ Configuración del archivo AppServiceProvider
 
 Se debe realizar un ajuste en el archivo:
 
-📁 app/Providers/AppServiceProvider.php
+#### 📁 app/Providers/AppServiceProvider.php
 
 Agregar la siguiente configuración dentro del método boot():
 
@@ -250,14 +252,13 @@ Se debe escribir yes para continuar con el proceso.
 
 📸 Resultado de la ejecución
 <p align="center"> <img src="https://github.com/user-attachments/assets/3e3a8c5b-5a13-40f5-a658-3709a575919f" width="800"> </p>
+
 ---
 
 ### 🔹 Paso 7: Ejecución del servidor y verificación del sistema
 
 En este paso se levanta el servidor de Laravel y se verifica el funcionamiento del proyecto.  
 Además, se muestra la creación de la base de datos en phpMyAdmin.
-
-
 
 #### 💻 Ejecutar servidor de Laravel
 
@@ -267,17 +268,20 @@ En la terminal de Visual Studio Code ejecutar:
 php artisan serve
 ```
 Este comando iniciará el servidor local y generará una URL como:
-
+```bash
 http://127.0.0.1:8000
+```
 <p align="center"> <img src="https://github.com/user-attachments/assets/c7d3adcd-312e-45fb-916e-bf0e16b940da" width="700"> </p>
-🌐 Visualización en el navegador
+
+#### 🌐 Visualización en el navegador
 
 Presionar Ctrl + Click sobre el enlace generado para abrir el proyecto en el navegador.
 
 Si todo está correcto, se mostrará la página principal de Laravel.
 
 <p align="center"> <img src="https://github.com/user-attachments/assets/24f6aff1-6c7f-4123-b92a-e191ecf5286e" width="800"> </p>
-🗄️ Creación de la base de datos en phpMyAdmin
+
+#### 🗄️Creación de la base de datos en phpMyAdmin
 
 Luego, se debe acceder a phpMyAdmin desde WampServer para crear la base de datos utilizada en el proyecto.
 
@@ -287,8 +291,74 @@ laravel_login
 <p align="center"> <img src="https://github.com/user-attachments/assets/975cac60-1bb9-4cd7-9e97-3e90666ac861" width="800"> </p>
 
 ---
-### 🔹 Paso 8: Bootstrap con login/registro
- Para entrar al Bootstrap con login/registro
+
+### 🔹 Paso 8: Implementación del sistema de Login con Laravel UI (Bootstrap)
+
+En este paso se instala el sistema de autenticación utilizando Laravel UI con Bootstrap, el cual permite habilitar las funcionalidades de registro e inicio de sesión.
+
+#### 💻 Ejecución de comandos
+
+En la terminal de Visual Studio Code ejecutar los siguientes comandos:
+
+```bash
+composer require laravel/ui
+php artisan ui bootstrap
+php artisan ui bootstrap --auth
+npm install
+npm run dev
+php artisan serve
+```
+Estos comandos permiten instalar las dependencias necesarias, generar las vistas de autenticación y compilar los estilos con Bootstrap.
+
+#### 📸 Proceso de instalación
+<p align="center"> <img src="https://github.com/user-attachments/assets/a2c5605e-a4bd-4a93-bf2e-43cdcead620b" width="700"> </p> <p align="center"> <img src="https://github.com/user-attachments/assets/f93e07d9-9e83-49bd-ae65-132023c845c5" width="700"> </p> <p align="center"> <img src="https://github.com/user-attachments/assets/21b2b1a4-2955-43d7-a9c0-730e74541147" width="700"> </p> <p align="center"> <img src="https://github.com/user-attachments/assets/42ab1f71-30a0-4387-959f-c243f48d4f2f" width="700"> </p>
+
+#### 🌐 Visualización del sistema
+Luego de ejecutar los comandos, presionar Ctrl + Click sobre el enlace:
+
+```bash
+http://127.0.0.1:8000
+```
+
+Esto abrirá el sistema en el navegador mostrando la interfaz con las opciones de Login y Registro.
+
+<p align="center"> <img src="https://github.com/user-attachments/assets/1e70a5d8-b8ee-42b1-9d3a-c3aba55c46b6" width="800"> </p>
+
+---
+
+### 🔹 Paso 9: Registro e inicio de sesión
+
+En este paso se realiza el registro de un nuevo usuario y el acceso al sistema mediante el login.
+
+#### 📝 Registro de usuario
+
+En la página principal, hacer clic en la opción **Register** ubicada en la parte superior derecha.
+
+Luego, completar el formulario con los siguientes datos:
+
+- Nombre  
+- Correo electrónico  
+- Contraseña  
+
+Una vez completados los datos, presionar el botón **Register** para crear la cuenta.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/665d3465-e917-42a6-a5b2-3a69902af81d" width="800">
+</p>
+
+#### 🔐 Acceso al sistema
+
+Después de registrarse correctamente, el sistema redirige automáticamente al usuario a la página principal autenticada.
+
+En esta vista se puede observar que el usuario ha iniciado sesión exitosamente.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0c4af46e-585c-4484-85f1-9fefc3582c0b" width="800">
+</p>
+
+📌 **Nota:**  
+Laravel gestiona automáticamente la autenticación del usuario y la redirección a la vista protegida.
+
 ---
 ## 🔐 Instalación del Sistema de Autenticación
 
