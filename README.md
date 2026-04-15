@@ -430,20 +430,59 @@ php artisan migrate:rollback
 * users
 * password_resets
 * failed_jobs
-
 ---
 
 ## 📸 Resultados del Sistema
 
+---
+
 ### 🔐 Pantalla de Login
 
-📍 (XXXXXX - INSERTAR IMAGEN LOGIN AQUÍ)
+En esta pantalla el usuario puede ingresar su correo y contraseña para acceder al sistema.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/29c01611-58f3-4977-8f33-044cff7304c7" width="800">
+</p>
+
+---
+
+### 🔑 Proceso de Inicio de Sesión
+
+A continuación, se muestra el proceso de ingreso al sistema utilizando las credenciales registradas.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/a445dd58-dfb1-46af-a5b9-46104cb4dd2a" width="800">
+</p>
 
 ---
 
 ### 📝 Pantalla de Registro
 
-📍 (XXXXXX - INSERTAR IMAGEN REGISTER AQUÍ)
+En esta sección el usuario puede crear una nueva cuenta ingresando sus datos personales.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/95a31b22-f67e-4288-98f5-60606e166f5d" width="800">
+</p>
+
+---
+
+### ✅ Usuario autenticado
+
+Después de registrarse o iniciar sesión, el sistema muestra la vista principal indicando que el usuario ha ingresado correctamente.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/665d3465-e917-42a6-a5b2-3a69902af81d" width="800">
+</p>
+
+---
+
+### 🖥️ Vista interna del sistema
+
+En esta sección se muestra la interfaz interna del sistema una vez que el usuario ha iniciado sesión correctamente.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/897b4771-5ffa-4c45-8ea9-f79b8480545b" width="800">
+</p>
 
 ---
 
