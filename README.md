@@ -501,40 +501,42 @@ No se podían ejecutar los comandos de compilación.
 npm install
 npm run dev
 ```
+<img width="1919" height="957" alt="image" src="https://github.com/user-attachments/assets/e902b929-cc9d-49d3-afec-b6806788b4e8" />
 
 ---
 
 ### ❌ Problema 2: Versión de PHP incompatible
 
-**Dificultad:**
-PHP 8.5.0 generaba errores.
+**Dificultad:**  
+Se utilizó una versión de PHP muy reciente (8.5.0), lo que generaba errores de compatibilidad con Laravel durante la ejecución del proyecto.
 
-**Solución:**
-Cambiar a PHP 8.1 o 8.2 en WampServer.
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/97448bd6-98ad-4514-9e10-17ea8c9579af" width="500">
+</p>
 
+**Solución:**  
+Se cambió a una versión estable compatible con Laravel, como PHP 8.1 o 8.2, desde la configuración de WampServer.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e81568ae-0910-42e9-ad59-8930dbcd301f" width="500">
+</p>
 ---
 
-### ❌ Problema 3: Base de datos no creada
+### ❌ Problema 3: Error en archivo `.env`
 
-**Dificultad:**
-Error al ejecutar migraciones.
+**Dificultad:**  
+Los datos de conexión a la base de datos estaban incorrectos, lo que impedía que Laravel se conectara correctamente a MySQL.
 
-**Solución:**
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/28379337-15c0-4f4d-9e95-a4c8c9305b8a" width="400">
+</p>
 
-```bash id="df6xp4"
-php artisan migrate
-```
+**Solución:**  
+Se corrigieron los datos de configuración en el archivo `.env`, asegurando que coincidieran con los parámetros de la base de datos creada en MySQL.
 
----
-
-### ❌ Problema 4: Error en archivo .env
-
-**Dificultad:**
-Datos incorrectos de conexión.
-
-**Solución:**
-Corregir configuración en `.env`.
-
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0926eaef-be91-4bfc-8488-48458b280a01" width="400">
+</p>
 ---
 
 ## 📚 Referencias
