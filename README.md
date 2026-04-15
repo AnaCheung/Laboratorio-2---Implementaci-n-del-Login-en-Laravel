@@ -520,6 +520,7 @@ Se cambió a una versión estable compatible con Laravel, como PHP 8.1 o 8.2, de
 <p align="center">
   <img src="https://github.com/user-attachments/assets/e81568ae-0910-42e9-ad59-8930dbcd301f" width="500">
 </p>
+
 ---
 
 ### ❌ Problema 3: Error en archivo `.env`
@@ -537,6 +538,7 @@ Se corrigieron los datos de configuración en el archivo `.env`, asegurando que 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/0926eaef-be91-4bfc-8488-48458b280a01" width="400">
 </p>
+
 ---
 
 ## 📚 Referencias
